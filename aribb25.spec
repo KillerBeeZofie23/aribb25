@@ -1,12 +1,13 @@
 Name:           aribb25
 Version:        0.2.7
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Basic implementation of the ARIB STD-B25 public standard
 License:        ISC Licence
 URL:            http://www.videolan.org/
 
 Source0:        https://download.videolan.org/pub/pub/videolan/%{name}/%{version}/%{name}-%{version}.tar.gz
 
+BuildRequires:  gcc
 BuildRequires:  pkgconfig(libpcsclite)
 
 %description
@@ -67,5 +68,8 @@ rm -fr %{buildroot}%{_docdir}
 %{_libdir}/pkgconfig/*.pc
 
 %changelog
+* Thu Sep 20 2018 Simone Caronni <negativo17@gmail.com> - 0.2.7-2
+- Add GCC build requirement.
+
 * Fri Jul 22 2016 Simone Caronni <negativo17@gmail.com> - 0.2.7-1
 - First build.
